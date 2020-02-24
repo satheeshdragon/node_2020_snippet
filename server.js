@@ -13,7 +13,7 @@ app.set("view engine", "handlebars");
 
 var session = require('express-session');
 // Use the session middleware
-app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 50000000 }}))
+app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 365 * 24 * 60 * 60 * 1000 }}))
  
 
 app.use("/", routes);
